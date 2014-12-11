@@ -21,7 +21,11 @@
   <script type="text/x-handlebars" id="users">
     <ul class="users-listing">
       {{#each user in controller}}
-        <li>{{user.name}}</li>
+        <li>
+          {{#link-to "user" user}}
+            {{user.name}}
+          {{/link-to}}
+        </li>
       {{else}}
         <li>no users.... : (</li>
       {{/each}}
