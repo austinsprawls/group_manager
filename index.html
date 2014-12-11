@@ -7,17 +7,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <script type="text/x-handlebars">
-    <h2>Welcome to Ember.js</h2>
-
-    {{outlet}}
+  <script type="text/x-handlebars" id="application">
+    <div class="main">
+      <h1>Hello World</h1>
+      {{outlet}}
+    </div>
   </script>
 
-  <script type="text/x-handlebars" id="index">
-    <ul>
-    {{#each item in model}}
-      <li>{{item}}</li>
-    {{/each}}
+  <script type="text/x-handlebars" id="users">
+    <ul class="users-listing">
+      {{#each user in controller}}
+        <li>{{user.name}}</li>
+      {{else}}
+        <li>no users.... : (</li>
+      {{/each}}
     </ul>
   </script>
 
