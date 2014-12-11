@@ -44,6 +44,24 @@
       <p>{{bio}}</p>
       <span>Created {{creationDate}}</span>
     </div>
+
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" id="user/edit">
+    <div class="user-edit">
+      <label>Choose user avatar</label>
+      {{input value=avatarUrl}}
+
+      <label>User name</label>
+      {{input value=name}}
+
+      <label>User email</label>
+      {{input value=email}}
+
+      <label>User short bio</label>
+      {{textarea value=bio}}
+    </div>
   </script>
 
   <script src="js/app.js"></script>
